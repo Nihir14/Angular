@@ -1,0 +1,11 @@
+<h2>{{ title }}</h2>
+ 
+<button (click)="changeData()">Change Input Data</button>
+<button (click)="toggleChild()">Destroy / Create Child</button>
+ 
+<hr>
+ 
+<app-child
+  *ngIf="showChild"
+  [data]="parentData">
+</app-child>
