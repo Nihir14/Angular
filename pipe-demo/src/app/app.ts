@@ -1,12 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CapitalizePipe } from './capitalize.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [CommonModule, CapitalizePipe],
+  templateUrl: './app.html'
 })
 export class App {
-  protected readonly title = signal('pipe-demo');
+
+  title = 'angular custom pipe demo';
+  message = 'welcome to angular pipes';
+
 }
