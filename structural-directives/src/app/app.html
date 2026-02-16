@@ -1,0 +1,34 @@
+<h2>
+  Structural Directives
+</h2>
+
+<!-- ngIf -->
+ 
+<div *ngIf="isLoggedIn; else LoginBlock">
+  Welcome User !
+</div>
+
+<ng-template #LoginBlock>
+  Please Login to continue
+</ng-template>
+
+<hr>
+
+<!-- ngFor -->
+
+<h3>User List</h3>
+<ul>
+  <li *ngFor="let user of users; let i = index">
+    {{i + 1}} - {{ user }}
+  </li>
+</ul>
+
+<hr>
+
+<!-- ngSwitch -->
+
+<div [ngSwitch]="role">
+  <p *ngSwitchCase="'admin'">Admin Pannel</p>
+  <p *ngSwitchCase="'user'">User Pannel</p> 
+  <p *ngSwitchDefault>Guest Pannel</p>
+</div>
