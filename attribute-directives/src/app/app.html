@@ -1,0 +1,27 @@
+<h2>Attribute Directives</h2>
+
+<!-- ngClass -->
+
+<p [ngClass]="{ 'active': isActive, 'error': isError }">ngClass example</p>
+
+<button (click)="isActive = !isActive">
+  Toggle Active
+</button>
+
+<hr>
+
+<!-- ngStyle -->
+
+<p [ngStyle]="{ 'color': isActive ? 'green' : 'black', 'font-size': isActive ? '20px' : '16px' }">ngStyle example</p>
+
+<hr>
+
+<!-- ngModel -->
+
+<input [(ngModel)]="message" placeholder="Enter message">
+
+<p>you typed: {{ message }}</p>
+
+<hr>
+
+<button (click)="isActive = !isActive">Toggle Highlight</button>
